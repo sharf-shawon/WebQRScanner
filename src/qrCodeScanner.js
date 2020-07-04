@@ -1,4 +1,4 @@
-const qrcode = window.qrcode;
+const qrc = window.qrcode;
 
 const video = document.createElement("video");
 const canvasElement = document.getElementById("qr-canvas");
@@ -51,7 +51,7 @@ function tick() {
 
 function scan() {
   try {
-    qrcode.decode();
+    qrc.decode();
   } catch (e) {
     setTimeout(scan, 300);
   }
